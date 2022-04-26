@@ -134,15 +134,18 @@ li {
   display: flex;
   justify-content: space-between;
   margin: 20px 0;
+  border-radius: 5px;
 }
 
 .inc-exp-container > div {
   flex: 1;
   text-align: center;
+  
 }
 
 .inc-exp-container > div:first-of-type {
   border-right: 1px solid #dedede;
+  
 }
 
 .money {
@@ -178,6 +181,7 @@ input[type='number'] {
   cursor: pointer;
   background-color: #9c88ff;
   box-shadow: var(--box-shadow);
+  border-radius: 5px;
   color: #fff;
   border: 0;
   display: block;
@@ -207,6 +211,7 @@ input[type='number'] {
   position: relative;
   padding: 10px;
   margin: 10px 0;
+  border-radius: 5px;
 }
 
 .list li.plus {
@@ -221,6 +226,7 @@ input[type='number'] {
   cursor: pointer;
   background-color: #e74c3c;
   border: 0;
+  border-radius: 2px;
   color: #fff;
   font-size: 20px;
   line-height: 20px;
