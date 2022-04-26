@@ -1,24 +1,30 @@
-import { Header } from './components/Header';
-import { Balance } from './components/Balance';
-import { IncomeExpense } from './components/IncomeExpense';
-import { TransactionList } from './components/TransactionList';
-import { AddTransaction } from './components/AddTransaction';
+import NavHeader from './components/NavHeader';
+import Login from './pages/Login'
+import Dashboard from './pages/Dashboard'
+import Register from './pages/Register'
 
-import { GlobalProvider } from './context/GlobalState';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+
 
 import './App.css';
 
 function App() {
   return (
-    <GlobalProvider>
-      <Header />
-      <div className='container'>
-        <Balance />
-        <IncomeExpense />
-        <TransactionList />
-        <AddTransaction />
-      </div>
-    </GlobalProvider>
+    <>
+      <Router>
+        <div className='container'>
+          <NavHeader />
+          <Routes>
+            <Route path='/' element={<Dashboard />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/register' element={<Register />} />
+          </Routes>
+        </div>
+      </Router>
+      <ToastContainer />
+    </>
   );
 }
 

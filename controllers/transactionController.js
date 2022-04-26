@@ -42,7 +42,7 @@ const deleteTransaction = asyncHandler(async (req, res) => {
             throw new Error('User not found')
         }
 
-        // Make sure the logged in user matches the goal user
+        // Make sure the logged in user matches the transaction user
         if(transaction.user.toString() !== req.user.id) {
             res.status(401)
             throw new Error('User not authorized')
