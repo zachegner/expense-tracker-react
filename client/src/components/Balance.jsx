@@ -1,8 +1,9 @@
 import { numberWithCommas } from "../utils/format";
 
 function Balance({ transactions }) {
+  const transactionArr = Array.from(transactions)
  
-  const amounts = transactions.map(transaction => transaction.amount);
+  const amounts = transactionArr.map(transaction => transaction.amount);
 
   const total = amounts.reduce((acc, item) => (acc += item), 0).toFixed(2);
 

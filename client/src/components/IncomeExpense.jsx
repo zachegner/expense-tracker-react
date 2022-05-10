@@ -1,7 +1,9 @@
 import { numberWithCommas } from "../utils/format";
 
 function IncomeExpense({ transactions }) {
-  const amounts = transactions.map(transaction => transaction.amount);
+  const transactionArr = Array.from(transactions)
+
+  const amounts = transactionArr.map(transaction => transaction.amount);
 
   const income = amounts
     .filter(item => item > 0)

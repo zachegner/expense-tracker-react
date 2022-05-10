@@ -28,10 +28,10 @@ function Dashboard() {
 
     dispatch(getTransactions())
 
-    return () => {
+    /* return () => {
       dispatch(reset())
-    }
-  }, [user, navigate, isError, message, dispatch])
+    } */
+  }, [user, navigate , isError, message, dispatch])
 
   if (isLoading) {
     return <Spinner />
